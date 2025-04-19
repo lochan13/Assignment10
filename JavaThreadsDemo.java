@@ -27,4 +27,20 @@ public class JavaThreadsDemo {
         t3.start();
     }
 
+    public static void startRunnableLambda() {
+        Thread t4 = new Thread(() -> {
+            System.out.println("Lambda thread printing squares of 1 to 5:");
+            for (int i = 1; i <= 5; i++) {
+                System.out.println("Lambda Thread: " + (i * i));
+                try {
+                    Thread.sleep(400);
+                } catch (InterruptedException e) {
+                    System.out.println("Lambda thread interrupted");
+                }
+            }
+        });
+        t4.start();
+    }
+
+
 }
