@@ -42,5 +42,12 @@ public class JavaThreadsDemo {
         t4.start();
     }
 
+    public static void main(String[] args) {
+        System.out.println("=== Java Threads Demonstration ===");
 
+        startThreadOne();
+        startThreadTwo();
+        startAnonymousThread();
+        startRunnableLambda();
+    }
 }
