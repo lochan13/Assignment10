@@ -5,5 +5,9 @@ public class JavaThreadsDemo {
         t1.start();
     }
 
-   
+    public static void startThreadTwo() {
+        Thread t2 = new Thread(new MyThread2());
+        t2.start();
+    }
+
 }
